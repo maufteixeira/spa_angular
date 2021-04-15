@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos</title>
+</head>
+<body>
+    <h1>Cadastro de Alunos</h1>
+    <div class="container-fluid">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Escreva seu nome">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Sexo</mat-label>
+        <mat-select>
+          <mat-option value="one">Masc</mat-option>
+          <mat-option value="two">Fem</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Idade</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput placeholder="">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Curso</mat-label>
+        <mat-select>
+          <mat-option value="one">Ciencia da Computacao</mat-option>
+          <mat-option value="two">Analise de Sistemas</mat-option>
+          <mat-option value="three">Sistemas da Informacao</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button>Salvar</button>
+
+    </div>
+    <div class="container-fluid">
+      <table *ngIf="exibeTabela">
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Sexo</th>
+          <th>Data de Nascimento</th>
+          <th>Curso</th>
+        </tr>
+        <tr *ngFor="let aluno of listaAlunos">
+          <td>{{aluno.nome}}</td>
+          <td>{{aluno.idade}}</td>
+          <td>{{aluno.sexo}}</td>
+          <td>{{aluno.dtNascimento}}</td>
+          <td>{{aluno.curso}}</td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

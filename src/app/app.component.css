@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+  a {
+    text-decoration: none;
+  }
+
+  footer{
+    background-color: black;
+    color: #dddddd;
+    font-weight: bold;
+    padding-top: 5%;
+  }

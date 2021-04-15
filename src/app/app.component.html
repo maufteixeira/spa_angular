@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA com Angular</title>
+</head>
+
+<body>
+  <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a class="button" routerLink="/spa-alunos" routerLinkActive="activebutton">
+      <button mat-menu-item>Cadastro Alunos</button></a>
+      <a class="button" routerLink="/spa-notas" routerLinkActive="activebutton">
+      <button mat-menu-item>Cadastro Notas</button></a>
+    </mat-menu>
+
+    <span> Gestão Escolar </span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  <div style="display: none;">
+    <spa-alunos></spa-alunos>
+    <spa-notas></spa-notas>
+    <mat-toolbar>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a class="button" routerLink="/spa-alunos" routerLinkActive="activebutton">
+        <button mat-menu-item>Cadastro Alunos</button></a>
+        <a class="button" routerLink="/spa-notas" routerLinkActive="activebutton">
+        <button mat-menu-item>Cadastro Notas</button></a>
+      </mat-menu>
+
+      <span> Gestão Escolar </span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+</body>
+<footer>
+  <div class="container-fluid">
+    Desenvolvido por Mauricio Teixeira
+  </div>
+</footer>
+</html>

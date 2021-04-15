@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+  <h1>Cadastro de Notas</h1>
+   <div class="container-fluid">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do Aluno</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nota 1</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nota 2</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nota 3</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nota 4</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <button mat-raised-button>Salvar</button>
+    <button mat-raised-button>Calcular média</button>
+  </div>
+  <div class="container-fluid">
+    <table *ngIf="exibeTabela">
+      <tr>
+        <th>Nome</th>
+        <th>1º Trim.</th>
+        <th>2º Trim.</th>
+        <th>3º Trim.</th>
+        <th>4º Trim.</th>
+      </tr>
+      <tr *ngFor="let nota of listaNotas">
+        <td>{{nota._aluno}}</td>
+        <td>{{nota.nota1}}</td>
+        <td>{{nota.nota2}}</td>
+        <td>{{nota.nota3}}</td>
+        <td>{{nota.nota3}}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
